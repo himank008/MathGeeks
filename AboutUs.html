@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+
+        #maindiv {
+            margin-right: 0%;
+        }
+
+        #mainimg {
+            height: 40em;
+            width: 100%;
+        }
+
+        #img1 {
+            width: 100%;
+            max-height: 40em;
+        }
+
+        #clipath {
+            position: absolute;
+            height: 40em;
+            width: 45%;
+            background-color: black;
+            opacity: 0.7;
+            clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+        }
+
+        #text {
+            font-size: 300%;
+            font-weight: 600;
+            color: white;
+            position: relative;
+            top: 30%;
+            left: 10%;
+        }
+
+        #box1 {
+            background-image: linear-gradient(to right, rgb(255, 183, 0), rgb(255, 123, 0));
+            height: 40%;
+            width: 33.3%;
+            float: left;
+            position: absolute;
+        }
+
+        #box2 {
+            background-image: linear-gradient(to right, cyan, darkcyan);
+            height: 40%;
+            width: 33.3%;
+            float: left;
+            position: absolute;
+            left: 33.3%;
+        }
+
+        #box3 {
+            background-image: linear-gradient(to right, rgb(2, 183, 255), rgb(44, 82, 219));
+            height: 40%;
+            width: 33.3%;
+            float: left;
+            position: absolute;
+            left: 66.6%;
+        }
+
+        #mtbox {
+            position: absolute;
+            top: 125%;
+            width: 100%;
+            height: 10%;
+            background-color: white;
+        }
+
+        #analytics {
+            position: relative;
+            left: 15%;
+            top: 10%;
+            height: 25%;
+            width: 15%;
+        }
+
+        #text1 {
+            position: relative;
+            left: 15%;
+            top: 15%;
+            font-size: 120%;
+        }
+
+        #text2 {
+            position: relative;
+            left: 15%;
+            top: 15%;
+            font-size: 120%;
+        }
+
+        #lapsign {
+            position: relative;
+            left: 15%;
+            top: 20%;
+            height: 25%;
+            width: 15%;
+        }
+
+        #text3 {
+            position: relative;
+            top: 15%;
+            font-size: 120%;
+        }
+
+        #knowledge {
+            position: relative;
+            left: 15%;
+            top: 15%;
+            height: 25%;
+            width: 15%;
+        }
+
+        #box1:hover {
+            cursor: pointer;
+        }
+
+        #box2:hover {
+            cursor: pointer;
+        }
+
+        #box3:hover {
+            cursor: pointer;
+        }
+    </style>
+    <title>About Us</title>
+</head>
+
+<body>
+    <div id="maindiv">
+        <div id="clipath">
+            <div id="text">Mistakes are proof<br>that you are trying.</div>
+        </div>
+        <div id="mainimg"><img src="aboutusimg.png" id="img1"></div>
+        <div id="box1">
+            <div id="analytics"><img src="analytics.png" height="100%" width="100%"></div>
+            <div id="text1"><span style="font-size: 150%; font-weight: 550;">Track your performance!</span><br><br>Check
+                your analytics on weekly basis and see <br>how much you have improved.</div>
+        </div>
+        <div id="box2">
+            <div id="lapsign"><img src="laptop sign.png" height="100%" width="100%"></div>
+            <div id="text2"><span style="font-size: 150%; font-weight: 550;">Confrence with experts!</span><br><br>Video
+                confrence with experts with your parents <br>on monthly basis about your performance.</div>
+        </div>
+        <div id="box3">
+            <div id="knowledge"><img src="knowledge.webp" height="100%" width="100%"></div>
+            <div id="text3"><span style="font-size: 150%; font-weight: 550; position:relative;left: 15%;">Grow your
+                    knowledge!</span><br><br><span style="position: relative; left: 15%;">In-depth guides for
+                    solving,learning and trying <br>different things.Get daily motivation and <br>assignments.</span></div>
+        </div>
+        <div id="mtbox"></div>
+    </div>
+</body>
+
+</html>

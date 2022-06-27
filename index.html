@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: lightgray;
+        }
+
+        #header1 {
+            height: 13.5%;
+            width: 100%;
+            background-image: linear-gradient(to right, rgb(59, 71, 146), rgb(0, 9, 58));
+            position: fixed;
+        }
+
+        #name1 {
+            font-size: 2em;
+            margin-top: 2.25%;
+            margin-left: 5%;
+            float: left;
+            cursor: pointer;
+        }
+
+        #n1h1 {
+            color: rgb(76, 232, 199);
+        }
+
+        #n1h2 {
+            color: rgb(237, 203, 35);
+        }
+
+        .headertexts {
+            color: white;
+            float: right;
+            margin-right: 1.5%;
+            padding-top: 2.25%;
+            font-size: 1.7em;
+        }
+
+        .headertexts:hover {
+            text-decoration: underline;
+            text-decoration-color: white;
+            cursor: pointer;
+        }
+
+        #loginbtt {
+            height: 50px;
+            width: 125px;
+            background-image: linear-gradient(to right, rgb(255, 191, 0), orange);
+            float: right;
+            border-radius: 10px;
+            margin-right: 30px;
+            position: absolute;
+            transition: opacity 0.5s;
+            transition-timing-function: ease-in-out;
+        }
+
+        #logintext {
+            color: rgb(0, 9, 58);
+            font-size: 22px;
+            margin-top: 12px;
+            margin-left: 30px;
+            font-weight: 600;
+        }
+
+        #loginbtt:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        #side_column {
+            height: 644px;
+            width: 15.3%;
+            float: left;
+            margin-top: 6.8%;
+            background-color: rgb(7, 20, 94);
+        }
+
+        #maincontent {
+            margin-top: 6.8%;
+            float: right;
+            width: 83.7%;
+            height: 642px;
+            margin-right: 7px;
+            margin-left: 2px;
+            border: 1px solid black;
+        }
+
+        #mainiframe {
+            height: 100%;
+            width: 100%;
+            border: none;
+        }
+
+        #bgbutton {
+            height: 50px;
+            width: 125px;
+            float: right;
+            border-radius: 10px;
+            margin-top: 25px;
+            margin-right: 30px;
+        }
+
+        .columns {
+            height: 7%;
+            width: 97.7%;
+            background-color: rgb(59, 71, 146);
+            margin: 0.7%;
+            transition: width height 0.3s;
+        }
+
+        .column_text {
+            color: white;
+            font-size: 1.3em;
+            padding-top: 5%;
+            padding-left: 10%;
+            font-family: sans-serif;
+        }
+
+        .columns:hover {
+            cursor: pointer;
+            width: 103%;
+            height: 8%;
+            position: relative;
+            font-weight: 700;
+            padding-top: 0.5%;
+            background-image: linear-gradient(to right, rgb(59, 71, 146), rgb(0, 9, 58));
+            border-radius: 8px;
+        }
+
+        .columns:hover .column_text {
+            padding-top: 5%;
+        }
+
+        #Footer {
+            width: 100%;
+            height: 30%;
+            background-color: rgb(0, 9, 58);
+            position: absolute;
+            top: 99.5%;
+        }
+
+        .fa {
+            padding: 10px;
+            font-size: 2em;
+            width: 2%;
+            text-align: center;
+            text-decoration: none;
+            background-color: white;
+            border-radius: 40px;
+            margin-top: 20px;
+            color: rgb(0, 9, 58);
+            transition: font-size 0.3s width 0.3s;
+        }
+
+        .fa-facebook {
+            margin-left: 42.5%;
+        }
+
+        .fa-instagram {
+            margin-left: 2%;
+        }
+
+        .fa-twitter {
+            margin-left: 2%;
+        }
+
+        .fa:hover {
+            font-size: 2.5em;
+            width: 2.5%;
+            cursor: pointer;
+        }
+
+        .foottxts {
+            color: white;
+            font-size: 1em;
+            margin-left: 43%;
+            margin-top: 1%;
+            word-spacing: 0.5em;
+        }
+
+        .foottxts:hover {
+            cursor: pointer;
+        }
+
+        .foottxts2 {
+            color: white;
+            font-size: 1em;
+            margin-left: 42%;
+            margin-top: 1%;
+        }
+
+        .foottxts2 :hover {
+            cursor: pointer;
+        }
+
+        #copyright {
+            color: gray;
+            font-size: 1em;
+            margin-left: 25%;
+            margin-top: 1.8%;
+        }
+
+        #devname {
+            color: gray;
+            font-size: 1em;
+            margin-left: 40%;
+            margin-top: 0.5%;
+        }
+
+        @media (min-width: 701px) and (max-width: 1023px) {
+            #header1 {
+                width: 100%;
+                height: 6%;
+                position: fixed;
+                top: 0%;
+            }
+
+            #side_column {
+                margin-top: 0%;
+                width: 17%;
+            }
+
+            #name1 {
+                margin-top: 2%;
+                margin-left: 3%;
+                font-size: 1.7em;
+            }
+
+            .columns {
+                height: 9.5%;
+            }
+
+            .column_text {
+                padding-top: 10%;
+            }
+
+            .headertexts {
+                margin-left: 5px;
+            }
+
+            #maincontent {
+                float: none;
+                margin-left: 18%;
+                margin-top: 8.7%;
+            }
+
+            #loginbtt {
+                margin-top: -2%;
+            }
+
+            #Footer {
+                position: fixed;
+                top: 720px;
+                height: 30%;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            #header1 {
+                width: 100%;
+                height: 6%;
+                position: fixed;
+                top: 0%;
+            }
+
+            #side_column {
+                margin-top: 0%;
+                width: 17%;
+            }
+
+            #name1 {
+                margin-top: 2%;
+                margin-left: 3%;
+                font-size: 1.7em;
+            }
+
+            .columns {
+                height: 9.5%;
+            }
+
+            .column_text {
+                padding-top: 10%;
+            }
+
+            .headertexts {
+                margin-left: 5px;
+            }
+
+            #maincontent {
+                float: none;
+                margin-left: 18%;
+                margin-top: 8.5%;
+            }
+
+            #loginbtt {
+                margin-top: -1.5%;
+            }
+
+            #Footer {
+                position: fixed;
+                top: 735px;
+            }
+        }
+
+        @media screen and (width: 1280px) {
+            #header1 {
+                width: 100%;
+                height: 10%;
+                position: fixed;
+                top: 0%;
+            }
+
+            #side_column {
+                margin-top: 0%;
+                width: 17%;
+            }
+
+            #name1 {
+                margin-top: 2%;
+                margin-left: 3%;
+                font-size: 1.7em;
+            }
+
+            .columns {
+                height: 9.5%;
+            }
+
+            .column_text {
+                padding-top: 10%;
+            }
+
+            .headertexts {
+                margin-left: 5px;
+            }
+
+            #maincontent {
+                float: none;
+                margin-left: 18%;
+            }
+
+            #loginbtt {
+                margin-top: -0.5%;
+            }
+
+            #Footer {
+                position: fixed;
+                top: 735px;
+            }
+        }
+    </style>
+    <title>Math Geeks</title>
+</head>
+
+<body>
+    <div id="maindiv">
+        <div id="header1">
+            <div id="name1"><span id="n1h1">MATH</span> <span id="n1h2">GEEKS</span></div>
+            <div id="bgbutton">
+                <div id="loginbtt">
+                    <div id="logintext">Login</div>
+                </div>
+            </div>
+            <a href="Contact Us.html">
+                <div class="headertexts">Contact Us</div>
+            </a>
+            <a href="About Us.html">
+                <div class="headertexts">About Us</div>
+            </a>
+            <a href="index.html">
+                <div class="headertexts">Home</div>
+            </a>
+        </div>
+        <div id="side_column">
+            <a href="homepg.html" target="Myframe">
+                <div class="columns">
+                    <div class="column_text">Home</div>
+                </div>
+            </a>
+            <a href="Profit and Loss.html" target="Myframe">
+                <div class="columns">
+                    <div class="column_text">Profit and Loss</div>
+                </div>
+            </a>
+            <a href="Mensuration.html" target="Myframe">
+                <div class="columns">
+                    <div class="column_text">Mensuration</div>
+                </div>
+            </a>
+        </div>
+        <div id="maincontent"><iframe id="mainiframe" name="Myframe" src="homepg.html"></iframe></div>
+        <div id="Footer">
+            <div id="icons">
+                <a class="fa fa-facebook" href="https://m.facebook.com/himank.setia.33?_rdr"></a>
+                <a class="fa fa-instagram" href="https://www.instagram.com/_artist_himank_/"></a>
+                <a class="fa fa-twitter" href="https://twitter.com/HimankSetia008"></a>
+            </div>
+            <div id="footerinf">
+                <div class="foottxts">Info Support Marketing</div>
+                <div class="foottxts2">
+                    <pre>Terms of Use    Privacy Policy</pre>
+                </div>
+                <div id="copyright">Copyright © 2022. Math Geeks Inc. All rights reserved. See Math Geeks trademarks and
+                    patents.</div>
+                <div id="devname">Developed By - Himank Setia</div>
+            </div>
+        </div>
+    </div>
+    <!--<script type="text/javascript">
+        eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(3(){(3 a(){8{(3 b(2){7((\'\'+(2/2)).6!==1||2%5===0){(3(){}).9(\'4\')()}c{4}b(++2)})(0)}d(e){g(a,f)}})()})();',17,17,'||i|function|debugger|20|length|if|try|constructor|||else|catch||5000|setTimeout'.split('|'),0,{}))
+        </script>-->
+</body>
+
+</html>

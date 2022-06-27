@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+
+        #maindiv {
+            height: 47em;
+            width: 100%;
+            background-image: url(contactusimg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #cutout {
+            height: 753px;
+            width: 100%;
+            background-color: rgb(34, 56, 126);
+            opacity: 0.6;
+            position: relative;
+            top: 0%;
+            float: left;
+        }
+
+        #text1 {
+            color: white;
+            position: absolute;
+            top: 15%;
+            left: 40%;
+            font-size: 250%;
+            font-weight: bold;
+        }
+
+        #text2 {
+            color: white;
+            position: absolute;
+            top: 22%;
+            left: 12.5%;
+            font-size: 150%;
+        }
+
+        #mainbox {
+            height: 45%;
+            width: 30%;
+            background-color: #fff;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            border-radius: 15px;
+        }
+
+        #namediv {
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            width: 80%;
+        }
+
+        #name {
+            position: absolute;
+            width: 100%;
+            padding: 2%;
+            padding-left: 6%;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-size: 120%;
+            border-image: linear-gradient(to right, rgb(59, 71, 146), rgb(0, 9, 58));
+            border-image-slice: 1%;
+            border-width: 0.3em;
+        }
+
+        #emaildiv {
+            position: absolute;
+            left: 5%;
+            top: 25%;
+            width: 80%;
+        }
+
+        #email {
+            position: absolute;
+            width: 100%;
+            padding: 2%;
+            padding-left: 6%;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-size: 120%;
+            border-image: linear-gradient(to right, rgb(59, 71, 146), rgb(0, 9, 58));
+            border-image-slice: 1%;
+            border-width: 0.3em;
+        }
+
+        #msgbox {
+            position: absolute;
+            left: 5%;
+            top: 45%;
+            width: 80%;
+        }
+
+        #message {
+            position: absolute;
+            width: 100%;
+            padding: 2%;
+            padding-left: 6%;
+            padding-bottom: 9%;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-size: 120%;
+            border-image: linear-gradient(to right, rgb(59, 71, 146), rgb(0, 9, 58));
+            border-image-slice: 1%;
+            border-width: 0.3em;
+        }
+
+        #subox {
+            position: absolute;
+            left: 10%;
+            top: 75%;
+            width: 25%;
+            height: 12%;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, rgb(59, 71, 146), rgb(0, 9, 58));
+            color: white;
+        }
+
+        #text3 {
+            padding-top: 8%;
+            padding-left: 25%;
+            font-size: 140%;
+            font-weight: 550;
+        }
+
+        #subox:hover {
+            cursor: pointer;
+        }
+
+        #address {
+            position: absolute;
+            top: 33.5%;
+            left: 20%;
+            color: rgb(46, 196, 255);
+            font-size: 200%;
+        }
+
+        #emailsign {
+            position: absolute;
+            top: 33.5%;
+            left: 15%;
+            height: 8%;
+            width: 4%;
+            clip-path: circle(50%);
+        }
+
+        #mailtxt {
+            position: absolute;
+            top: 39%;
+            left: 19.5%;
+            color: white;
+        }
+
+        #websign {
+            position: absolute;
+            top: 48.5%;
+            left: 15%;
+            height: 8%;
+            width: 4%;
+            clip-path: circle(50%);
+            background-color: white;
+        }
+
+        #website {
+            position: absolute;
+            top: 48.5%;
+            left: 20%;
+            color: rgb(46, 196, 255);
+            font-size: 200%;
+        }
+
+        #webtxt {
+            position: absolute;
+            top: 54%;
+            left: 19.5%;
+            color: white;
+        }
+
+        input {
+            color: rgb(59, 71, 146);
+        }
+
+        ::placeholder {
+            color: rgba(0, 0, 139, 0.816);
+        }
+
+        input:hover::placeholder {
+            opacity: 0.7;
+            color: rgba(255, 68, 0, 0.767);
+        }
+    </style>
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div id="maindiv">
+        <div id="cutout"></div>
+        <div id="text1">Contact Us</div><br>
+        <div id="text2">If you have any query about anything, feel free to contact us. We will try our best to solve
+            your problem.</div>
+        <div id="mainbox">
+            <div id="namediv"><input type="text" name="name" placeholder="Username" id="name"></div>
+            <div id="emaildiv"><input type="email" name="email" placeholder="E-mail" id="email"></div>
+            <div id="msgbox"><input type="text" name="message" placeholder="Type your message..." id="message"></div>
+            <div id="subox">
+                <div id="text3">Send</div>
+            </div>
+        </div>
+        <div id="emailsign"><img src="emailsign.jpg" height="100%" width="100%"></div>
+        <div id="address">E-mail</div>
+        <div id="mailtxt">mathgeeks22@gmail.com</div>
+        <div id="websign"><img src="webpsign.webp" height="100%" width="100%"></div>
+        <div id="website">Website</div>
+        <div id="webtxt">mathgeeks.github.io/Math_Geeks</div>
+    </div>
+</body>
+
+</html>

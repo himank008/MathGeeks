@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        #headingtxt {
+            color: rgb(0, 9, 58);
+            font-size: 300%;
+            font-weight: 600;
+            margin-top: 3%;
+            margin-left: 35%;
+        }
+
+        #mensdef1 {
+            color: rgb(0, 9, 58);
+            font-size: 170%;
+            margin: 1% 0% 0% 1.5%;
+        }
+
+        #impoints {
+            color: rgb(0, 9, 58);
+            font-size: 1.6em;
+            font-weight: 550;
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+
+        #conbox {
+            margin-top: 1%;
+            margin-left: 2%;
+            bottom: 10%;
+            height: fit-content;
+            width: 95%;
+            border-radius: 20px;
+            background-image: radial-gradient(white, skyblue);
+        }
+
+        #points {
+            color: rgb(0, 9, 58);
+            font-size: 1.3em;
+            font-weight: 550;
+            margin-top: 0.5%;
+            margin-left: 3%;
+            margin-right: 1%;
+        }
+
+        #perihead {
+            color: darkcyan;
+            font-size: 250%;
+            font-weight: 600;
+            margin-top: 1.5%;
+            margin-left: 10%;
+            font-style: italic;
+        }
+
+        #peridef {
+            color: rgb(0, 9, 58);
+            font-size: 170%;
+            margin-top: 1%;
+            margin-left: 12%;
+            margin-right: 5%;
+            font-weight: 550;
+        }
+
+        #periformhd {
+            color: orange;
+            font-size: 225%;
+            margin-top: 1.5%;
+            margin-left: 10%;
+            font-style: italic;
+            font-weight: 550;
+        }
+
+        #sqperi1 {
+            height: 10em;
+            width: 15%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+            background-color: rgb(255, 213, 0);
+            border: 2px solid rgb(0, 9, 58);
+        }
+
+        #sqperi2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -10%;
+            margin-left: 35%;
+            font-weight: 550;
+        }
+
+        #sqlen {
+            margin-left: 22.5%;
+            margin-top: 0.5%;
+            font-size: 135%;
+            color: rgb(0, 9, 58);
+        }
+
+        #peri1 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #peri2 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 6%;
+            margin-left: 15%;
+        }
+
+        #recperi1 {
+            height: 10em;
+            width: 25%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+            background-color: orange;
+            border: 2px solid rgb(0, 9, 58);
+        }
+
+        #reclen {
+            margin-top: 1%;
+            margin-left: 27.5%;
+            font-size: 135%;
+            color: rgb(0, 9, 58);
+        }
+
+        #recwid {
+            margin-top: -10%;
+            margin-left: 13%;
+            font-size: 135%;
+            color: rgb(0, 9, 58);
+        }
+
+        #recperi2 {
+            margin-left: 50%;
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            font-weight: 550;
+            margin-top: -2.5%;
+        }
+
+        #gif1 {
+            margin-top: 1.5%;
+            margin-left: 15%;
+            height: 40%;
+            width: 25%;
+        }
+
+        #circleperi2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -15%;
+            margin-left: 45%;
+            font-weight: 550;
+        }
+
+        #triperi {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 12%;
+            margin-left: 15%;
+        }
+
+        #triperi1 {
+            height: 15em;
+            width: 20%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            background-color: orangered;
+        }
+
+        #tribase {
+            margin-top: 0.5%;
+            margin-left: 25%;
+            font-size: 160%;
+            color: rgb(0, 9, 58);
+        }
+
+        #trileft {
+            margin-top: -13%;
+            margin-left: 17%;
+            font-size: 160%;
+            color: rgb(0, 9, 58);
+        }
+
+        #triright {
+            margin-top: -2.5%;
+            margin-left: 32%;
+            font-size: 160%;
+            color: rgb(0, 9, 58);
+        }
+
+        #triperi2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -5%;
+            margin-left: 45%;
+            font-weight: 550;
+        }
+
+        #areahead {
+            color: darkcyan;
+            font-size: 250%;
+            font-weight: 600;
+            margin-top: 13%;
+            margin-left: 10%;
+            font-style: italic;
+        }
+
+        #areadef {
+            color: rgb(0, 9, 58);
+            font-size: 170%;
+            margin-top: 1%;
+            margin-left: 12%;
+            margin-right: 5%;
+            font-weight: 550;
+        }
+
+        #areaformhd {
+            color: orange;
+            font-size: 225%;
+            margin-top: 1.5%;
+            margin-left: 10%;
+            font-style: italic;
+            font-weight: 550;
+        }
+
+        #sqarea1 {
+            height: 15em;
+            width: 20%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #area1 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #sqarea2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -10%;
+            margin-left: 40%;
+            font-weight: 550;
+        }
+
+        #area2 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 6%;
+            margin-left: 15%;
+        }
+
+        #recarea1 {
+            height: 15em;
+            width: 35%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #recarea2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -12%;
+            margin-left: 52%;
+            font-weight: 550;
+        }
+
+        #area3 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 7%;
+            margin-left: 15%;
+        }
+
+        #triarea1 {
+            height: 15em;
+            width: 35%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #triarea2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -12%;
+            margin-left: 52%;
+            font-weight: 550;
+        }
+
+        #area4 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 10%;
+            margin-left: 15%;
+        }
+
+        #circlearea1 {
+            height: 15em;
+            width: 40%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+            border-radius: 20px;
+        }
+
+        #circlearea2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -12%;
+            margin-left: 57%;
+            font-weight: 550;
+        }
+
+        #area5 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 13%;
+            margin-left: 15%;
+        }
+
+        #trapezoidarea1 {
+            height: 20em;
+            width: 35%;
+            margin-top: 1.5%;
+            margin-left: 5%;
+        }
+
+        #trapezoidarea2 {
+            height: 15em;
+            width: 45%;
+            margin-top: -25%;
+            margin-left: 45%;
+        }
+
+        #area6 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 13%;
+            margin-left: 15%;
+        }
+
+        #parallelarea1 {
+            height: 15em;
+            width: 35%;
+            margin-top: 1.5%;
+            margin-left: 13%;
+        }
+
+        #parallelarea2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -12%;
+            margin-left: 52%;
+            font-weight: 550;
+        }
+
+        #area7 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 13%;
+            margin-left: 15%;
+        }
+
+        #quadarea1 {
+            height: 15em;
+            width: 35%;
+            margin-top: 1.5%;
+            margin-left: 13%;
+        }
+
+        #quadarea2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -12%;
+            margin-left: 51%;
+            font-weight: 550;
+        }
+
+        #surfareahead {
+            color: darkcyan;
+            font-size: 250%;
+            font-weight: 600;
+            margin-top: 7%;
+            margin-left: 10%;
+            font-style: italic;
+        }
+
+        #surfareadef {
+            color: rgb(0, 9, 58);
+            font-size: 170%;
+            margin-top: 1%;
+            margin-left: 12%;
+            margin-right: 5%;
+            font-weight: 550;
+        }
+
+        #surfareaformhd {
+            color: orange;
+            font-size: 225%;
+            margin-top: 1.5%;
+            margin-left: 10%;
+            font-style: italic;
+            font-weight: 550;
+        }
+
+        #cubearea1 {
+            height: 15em;
+            width: 25%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #cubearea2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -17%;
+            margin-left: 52%;
+            font-weight: 550;
+        }
+
+        #surfarea1 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #surfarea2 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 7%;
+            margin-left: 15%;
+        }
+
+        #spherearea1 {
+            height: 15em;
+            width: 25%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #spherearea2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -15%;
+            margin-left: 52%;
+            font-weight: 550;
+        }
+
+        #surfarea3 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 15%;
+            margin-left: 15%;
+        }
+
+        #cylinderarea1 {
+            height: 15em;
+            width: 25%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #cylinderarea2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -15%;
+            margin-left: 52%;
+            font-weight: 550;
+        }
+
+        #volareahead {
+            color: darkcyan;
+            font-size: 250%;
+            font-weight: 600;
+            margin-top: 12%;
+            margin-left: 10%;
+            font-style: italic;
+        }
+
+        #voldef {
+            color: rgb(0, 9, 58);
+            font-size: 170%;
+            margin-top: 1%;
+            margin-left: 12%;
+            margin-right: 5%;
+            font-weight: 550;
+        }
+
+        #volformhd {
+            color: orange;
+            font-size: 225%;
+            margin-top: 1.5%;
+            margin-left: 10%;
+            font-style: italic;
+            font-weight: 550;
+        }
+
+        #vol1 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 1%;
+            margin-left: 15%;
+        }
+
+        #spherevol1 {
+            height: 10em;
+            width: 15%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #spherevol2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -7%;
+            margin-left: 35%;
+            font-weight: 550;
+        }
+
+        #vol2 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 15%;
+            margin-left: 15%;
+        }
+
+        #cubevol1 {
+            height: 15em;
+            width: 25%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #cubevol2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -15%;
+            margin-left: 52%;
+            font-weight: 550;
+        }
+
+        #vol3 {
+            color: rgb(0, 9, 58);
+            font-size: 200%;
+            font-weight: 550;
+            margin-top: 15%;
+            margin-left: 15%;
+        }
+
+        #cylindervol1 {
+            height: 15em;
+            width: 25%;
+            margin-top: 1.5%;
+            margin-left: 15%;
+        }
+
+        #cylindervol2 {
+            color: rgb(0, 9, 58);
+            font-size: 160%;
+            margin-top: -12%;
+            margin-left: 52%;
+            font-weight: 550;
+            margin-bottom: 15%;
+        }
+    </style>
+    <title>Mensuration</title>
+</head>
+
+<body>
+    <div id="maindiv">
+        <div id="headingtxt">Mensuration</div>
+        <div id="mensdef1"><span style="color: red; font-weight: 550;">Mensuration</span> is a division of mathematics
+            that studies geometric figure calculation and its
+            parameters such as area, length, volume, lateral surface area, surface area, etc.</div>
+        <div id="conbox">
+            <div id="impoints">*Some Important things to know*</div>
+            <ul id="points">
+                <li>Area - Area is the amount of space occupied by a
+                    two-dimensional figure. It is expressed in square units.</li>
+                <li>Perimeter - Perimeter is the total distance around the shape or the length of the boundary of any
+                    closed shape.
+                    It is expressed in square units.
+                </li>
+                <li>Surface Area - Surface Area is the total area occupied by the surfaces of a 3D object. They are
+                    classified into two -
+                    Curved or Lateral Surface Area and Total Surface Area.</li>
+                <li>Volume - Volume is the amount of space occupied by a 3D shape. It is expressed in cubic meter.</li>
+            </ul>
+        </div>
+        <div id="perihead">Perimeter :-</div>
+        <div id="peridef">Perimeter is the total distance around the shape or the length of the boundary of any
+            closed shape.</div>
+        <div id="periformhd">Formulas of Perimeter :-</div>
+        <div id="peri1">Perimeter of square :-</div>
+        <div id="sqperi1"></div>
+        <div id="sqlen">5</div>
+        <div id="sqperi2">Perimeter of square = 4 x Side <br>= 4 x 5 = 20</div>
+        <div id="peri2">Perimeter of rectangle :-</div>
+        <div id="recperi1"></div>
+        <div id="reclen">5</div>
+        <div id="recwid">3</div>
+        <div id="recperi2">Perimeter of rectangle = 2(L + B) <br>= 2(5 + 3) = 2 x 8 = 16</div>
+        <div id="peri2">Perimeter of circle :-</div>
+        <div id="gif1"><img src="circleperi.gif" height="100%" width="100%"></div>
+        <div id="circleperi2">Perimeter of circle = 2<span style="font-style: italic;">π</span>r or <span
+                style="font-style: italic;">π</span>d</div>
+        <div id="triperi">Perimeter of triangle :-</div>
+        <div id="triperi1"></div>
+        <div id="tribase">b</div>
+        <div id="trileft">a</div>
+        <div id="triright">c</div>
+        <div id="triperi2">Perimeter of triangle = a + b + c</div>
+        <div id="areahead">Area :-</div>
+        <div id="areadef">Area - Area is the amount of space occupied by a
+            two-dimensional figure. It is expressed in square units.</div>
+        <div id="areaformhd">Formulas of Area :-</div>
+        <div id="area1">Area of Square :-</div>
+        <div id="sqarea1"><img src="sqarea.jpg" height="100%" width="100%"></div>
+        <div id="sqarea2">Area of square = Side x Side <br>= Side<sup>2</sup> 5 x 5 = 25</div>
+        <div id="area2">Area of Rectangle :-</div>
+        <div id="recarea1"><img src="recarea1.png" height="100%" width="100%"></div>
+        <div id="recarea2">Area of rectangle = Length x Breadth <br>= 35 x 20 = 700</div>
+        <div id="area3">Area of Triangle :-</div>
+        <div id="triarea1"><img src="triarea1.jpg" height="100%" width="100%"></div>
+        <div id="triarea2">Area of triangle = 1/2 x Height x Base </div>
+        <div id="area4">Area of Circle :-</div>
+        <div id="circlearea1"><img src="circlearea.gif" height="100%" width="100%" style="border-radius: 20px;"></div>
+        <div id="circlearea2">Area of circle = πr<sup>2</sup></div>
+        <div id="area5">Area of Trapezoid :-</div>
+        <div id="trapezoidarea1"><img src="trapezoid1.png" height="100%" width="100%"></div>
+        <div id="trapezoidarea2"><img src="trapezoid2.gif" height="100%" width="100%"></div>
+        <div id="area6">Area of Parallelogram :-</div>
+        <div id="parallelarea1"><img src="parallel1.png" height="100%" width="100%"></div>
+        <div id="parallelarea2">Area of parallelogram = Height x Base</div>
+        <div id="area7">Area of Quadrilateral :-</div>
+        <div id="quadarea1"><img src="quad1.png" height="100%" width="100%"></div>
+        <div id="quadarea2">Area of quadrilateral = Area of DBA + Area of DBC<br>= (1/2 x DB x h<sub>1</sub>) + (1/2 x
+            DB x h<sub>2</sub>)<br>= 1/2 x DB(h<sub>1</sub> + h<sub>2</sub>)</div>
+        <div id="surfareahead">Surface Area :-</div>
+        <div id="surfareadef">Surface Area is the total area occupied by the surfaces of a 3D object.</div>
+        <div id="surfareaformhd">Formulas of Surface Area :-</div>
+        <div id="surfarea1">Surface Area of Cube :-</div>
+        <div id="cubearea1"><img src="cube1.gif" height="100%" width="100%"></div>
+        <div id="cubearea2">We know that a cube has 6 sides that are all squares. Area of a square is Side<sup>2</sup>,
+            so area of 6 squares will be 6 x side<sup>2</sup><br>∴ Surface Area of Cube = 6a<sup>2</sup></div>
+        <div id="surfarea2">Surface Area of Sphere :-</div>
+        <div id="spherearea1"><img src="sphere1.gif" height="100%" width="100%"></div>
+        <div id="spherearea2">Surface Area of Sphere = 4πr<sup>2</sup></div>
+        <div id="surfarea3">Surface Area of Cylinder :-</div>
+        <div id="cylinderarea1"><img src="cylinder1.gif" height="100%" width="100%"></div>
+        <div id="cylinderarea2">Surface Area of cylinder = 2πr<sup>2</sup> + 2πrh<br>= 2πr(r + h)</div>
+        <div id="volareahead">Volume :-</div>
+        <div id="voldef">Volume is the amount of space occupied by a 3D shape. It is expressed in cubic meter.</div>
+        <div id="volformhd">Formulas of Volume :-</div>
+        <div id="vol1">Volume of Cube :-</div>
+        <div id="cubevol1"><img src="cubevol1.png" height="100%" width="100%"></div>
+        <div id="cubevol2">Volume of Cube = Side x Side x Side<br>= Side<sup>3</sup></div>
+        <div id="vol2">Volume of Sphere :-</div>
+        <div id="spherevol1"><img src="spherevol1.png" height="100%" width="100%"></div>
+        <div id="spherevol2">Volume of Sphere = 4/3πr<sup>3</sup></div>
+        <div id="vol3">Volume of Cylinder :-</div>
+        <div id="cylindervol1"><img src="cylindervol.gif" height="100%" width="100%"></div>
+        <div id="cylindervol2">Volume of Cylinder = πr<sup>2</sup>h</div>
+    </div>
+</body>
+
+</html>
